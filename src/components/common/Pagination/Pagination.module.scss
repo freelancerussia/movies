@@ -1,0 +1,41 @@
+@import '../../common/styles/styles.module.scss';
+.pagination {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+
+.leftArr {
+   transform: rotate(-180deg);
+   outline: none;
+   @include adaptiv-font(20,17,1);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0;
+      @media screen and (max-width:996px){
+         & svg {
+            width: 20px;
+         }
+      }
+
+   &:disabled {
+      opacity: 0.5;
+   }
+}
+
+.rightArr {
+   outline: none;
+   @include adaptiv-font(20, 17, 1);
+         font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0;
+      @media screen and (max-width:996px) {
+            & svg {
+               width: 20px;
+            }
+         }
+   &:disabled {
+         opacity: 0.5;
+      }
+}

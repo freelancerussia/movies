@@ -1,0 +1,34 @@
+@import './reset.scss';
+@import './mixins.module.scss';
+@import './trailers-slider.scss';
+
+$primary-color: #fff;
+
+
+
+body {
+  background: rgb(30, 37, 56) url('/images/homepage/bg.png') no-repeat top left/cover;
+  color: $primary-color;
+  min-height: 100%;
+  font-size: 16px;
+  transition: all 0.3s;
+  overflow-x: hidden;
+  // transition: overflow 0.3s, padding-right 0.3s;
+
+  // &:has(div.scroll-locked){
+  //   overflow: hidden;
+  //   // padding-right: 13px;
+  // } 
+
+  @media screen and (max-width:767px) {
+    background-position: center center;
+  }
+}
+
+button {
+  color: $primary-color;
+}
+
+a {
+  color: #fff;
+}

@@ -1,0 +1,87 @@
+@import '../../../common/styles/styles.module.scss';
+
+.personSmallCard {
+   width: 444px;
+   height: 444px;
+   position: relative;
+   border-radius: 10px;
+   overflow: hidden;
+
+   @media screen and (max-width:1430px) {
+      width: 264px;
+      height: 264px;
+   }
+
+   @media screen and (max-width:991px) {
+      width: 100%;
+      height: 321px;
+   }
+
+   @media screen and (max-width:767px){
+      height: 179px;
+   }
+
+   & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+   }
+}
+
+.personInfo {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: auto;
+   padding: 25px;
+
+   @media screen and (max-width:996px) {
+      padding: 13px;
+   }
+}
+
+.personRuName {
+   @include adaptiv-font(27, 15, 1);
+   font-weight: 700;
+   line-height: 1;
+   letter-spacing: 0;
+}
+
+.personEnName {
+   color: rgba(255, 255, 255, 0.35);
+   @include adaptiv-font(20, 11, 1);
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: 0;
+   margin: 10px 0;
+}
+
+.personAge {
+   color: rgb(242, 246, 15);
+   @include adaptiv-font(15, 10, 1);
+   font-weight: 500;
+   line-height: 1;
+   letter-spacing: 0;
+}
+
+.personRank {
+   color: rgb(242, 246, 15);
+   @include adaptiv-font(15, 12, 1);
+   font-weight: 500;
+   line-height: 1;
+   letter-spacing: 0;
+   position: absolute;
+   top: 25px;
+   left: 25px;
+   height: 10px;
+   width: 100%;
+
+   @media screen and (max-width:996px){
+      top: 13px;
+      left: 13px;
+   }
+}

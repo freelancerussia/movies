@@ -1,0 +1,54 @@
+@import '../common/styles/styles.module.scss';
+
+.footer {
+   padding: 130px 0 40px 0;
+
+   @media screen and (max-width:767px){
+      padding: 70px 0 30px 0;
+   }
+}
+
+.footerMenu {
+
+}
+
+.footerMenuList {
+   display: flex;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+
+   @media screen and (max-width:767px){
+      flex-direction: column;
+   }
+
+}
+
+.footerLink {
+      @include adaptiv-font(17,13,1);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+}
+
+.copyright {
+   color: rgba(227, 230, 240, 0.72);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0;
+      text-align: center;
+      margin:  30px 0;
+}
+
+.privatePolitic {
+   text-align: center;
+    & a {
+      color: rgba(227, 230, 240, 0.72);
+         font-size: 15px;
+         font-weight: 400;
+         line-height: 1;
+         letter-spacing: 0;
+         text-decoration-line: underline;
+    }
+}

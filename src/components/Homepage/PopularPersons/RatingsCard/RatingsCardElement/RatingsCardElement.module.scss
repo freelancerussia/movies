@@ -1,0 +1,65 @@
+@import '../../../../common/styles/styles.module.scss';
+
+.RatingsCardElement {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 0 20px 0;
+   border-bottom: 2px solid rgb(30, 37, 56);
+
+   &:last-child {
+      border-bottom: none;
+   }
+
+   @media screen and (max-width:1430px){
+      padding:3px 0;
+   }
+}
+
+.personInfo {}
+
+.personRuName {
+   // @include adaptiv-font(20, 15, 1);
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 1;
+   letter-spacing: 0;
+
+   @media screen and (max-width:1430px){
+      font-size: 15px;
+   }
+}
+
+.personEnName {
+   color: rgb(59, 72, 107);
+   // @include adaptiv-font(15, 11, 1);
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: 0;
+   margin: 10px 0 8px 0;
+   @media screen and (max-width:1430px) {
+         font-size: 11px;
+         margin: 5px 0;
+      }
+}
+
+.personAge {
+   color: rgb(242, 246, 15);
+   // @include adaptiv-font(14, 11, 1);
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 1;
+   letter-spacing: 0;
+   @media screen and (max-width:1430px) {
+         font-size: 11px;
+      }
+}
+
+.rank {
+   color: rgb(242, 246, 15);
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: 0;
+}

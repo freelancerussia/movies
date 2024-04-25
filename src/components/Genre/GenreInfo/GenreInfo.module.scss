@@ -1,0 +1,22 @@
+@import  '../../common/styles/styles.module.scss';
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 15px
+}
+
+.title {
+   @extend %title;
+}
+
+.sortedSelect {
+   border-radius: 10px;
+      background: rgb(27, 33, 51);
+         font-size: 14px;
+         font-weight: 600;
+         letter-spacing: 0;
+         padding: 17px 19px;
+         color: #fff;
+}

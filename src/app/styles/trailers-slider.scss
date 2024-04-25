@@ -1,0 +1,25 @@
+
+.trailers-slider{
+
+   & .swiper-wripper {}
+
+   & .swiper-slide {
+      height: 765px;
+      background-color:rgba(0,0,0,0.5);
+
+      &.swiper-slide-active {}
+   }
+}
+
+.trailers-slider-preview {
+   margin-top: 69px;
+   & .swiper-wripper {}
+   
+      & .swiper-slide {
+         height: 252px;
+         width: 342px;
+         background-color: rgba(0, 0, 0, 0.5);
+   
+         &.swiper-slide-active {}
+      }
+}

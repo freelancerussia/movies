@@ -1,0 +1,49 @@
+.breadCrumbsContainer {
+   display: flex;
+   gap: 32px;
+
+   & .link:last-child::after,
+   & .link:last-child::before {
+      display: none;
+   }
+}
+
+
+.link {
+   color: rgb(79, 91, 124);
+   font-weight: 500;
+   line-height: 168.7%;
+   letter-spacing: 0%;
+   font-size: 16px;
+   position: relative;
+   white-space: nowrap;
+
+   & a {
+      color: rgb(79, 91, 124);
+   }
+
+   &:after,
+   &:before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 1px;
+      right: -16px;
+      background-color: rgb(79, 91, 124);
+   }
+
+   &:after {
+      transform: rotate(45deg);
+      top: calc(50% - 1px);
+   }
+
+   &:before {
+      transform: rotate(-45deg);
+      top: calc(50% + 1px);
+   }
+
+}
+
+.currentCategory {
+   color: #fff;
+}

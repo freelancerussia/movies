@@ -1,0 +1,36 @@
+@import '../../../app/styles/mixins.module.scss';
+
+%title {
+   color: rgb(255, 255, 255);
+   @include adaptiv-font(65, 32, 1);
+   font-weight: 900;
+   line-height: 83px;
+   letter-spacing: 0;
+   white-space: nowrap;
+}
+
+%scrollbar {
+   &::-webkit-scrollbar {
+      height: 7px;
+      background: rgb(27, 33, 51);
+      border-radius: 10px;
+      transform: translateY(-500px);
+   }
+
+   &::-webkit-scrollbar-thumb {
+   background: rgb(54, 87, 203);
+      border-radius: 10px;
+   }
+}
+
+%yellowButton {
+   color: rgb(21, 26, 38);
+   @include adaptiv-font(18, 15, 1);
+      // font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+      border-radius: 10px;
+         background: rgb(242, 246, 15);
+
+}

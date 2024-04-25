@@ -1,0 +1,65 @@
+@import './../../../app/styles/mixins.module.scss';
+
+.logoContainer {
+   @include adaptiv-font(25,19,1);
+   font-weight: 800;
+   line-height: 20px;
+   letter-spacing: 0;
+   text-align: left;
+
+   & span {
+      color: rgb(54, 87, 203);
+   }
+}
+
+.logo {
+   margin-bottom: 7px;
+
+   & svg {
+      @include adaptiv-value(width,24,15,1);
+   }
+
+   @media screen and (max-width:1430px){
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+}
+
+.logoSocials {}
+
+.socialsList {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+}
+
+.socialsElement {
+   & a {
+      display: inline-block;
+            width: 25px;
+      height: 30px;
+
+      & svg {
+         max-width: 100%;
+         height: auto;
+
+         & path,& rect {
+            fill: transparent;
+            stroke: grey;
+         }
+      }
+   }
+
+   & a:hover {
+      & svg {
+
+         & path,
+         & rect {
+            stroke: #fff;
+            transition: all 0.3s;
+         }
+      }
+   }
+}

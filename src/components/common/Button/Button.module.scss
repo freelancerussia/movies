@@ -1,0 +1,18 @@
+.btn {
+   border-radius: 10px;
+   background: rgb(242, 246, 15);
+   padding: 13px;
+   width: 422px;
+   margin-bottom: 15px;
+   height: 55px;
+   color: rgb(21, 26, 38);
+   font-weight: 600;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   @media screen and (max-width:678px) {
+      width: 100%;
+   }
+}

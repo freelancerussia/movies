@@ -1,0 +1,49 @@
+@import '../../common/styles/styles.module.scss';
+
+.section {
+   padding: 65px 0 60px 0;
+
+   @media screen and (max-width:991px){
+      padding: 40px 0;
+   }
+}
+
+.filtersContainer {
+   margin-bottom: 70px;
+
+   @media screen and (min-width:1430px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   @media screen and (max-width:996px){
+      margin-bottom: 20px;
+   }
+}
+
+.title {
+   @extend %title;
+
+   @media screen and (max-width:1430px) {
+      margin-bottom: 15px;
+      white-space: wrap;
+      line-height: 1;
+   }
+}
+
+.personsContainer {
+   display: grid  ;
+grid-template-columns: 1fr 1fr 1fr;
+   gap: 22px;
+
+   @media screen and (max-width:991px){
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 321px auto;
+   }
+
+   @media screen and (max-width:767px){
+      grid-template-rows: 179px auto;
+   }
+}
+

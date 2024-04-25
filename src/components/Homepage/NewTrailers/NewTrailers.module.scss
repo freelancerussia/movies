@@ -1,0 +1,163 @@
+@import '../../common/styles/styles.module.scss';
+
+
+.section {
+   padding: 50px 0 74px 0;
+   @media screen and (max-width:767px){
+      padding: 40px 0;
+   }
+}
+
+.titleAndLinkContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 40px;
+}
+
+.title {
+   @extend %title;
+
+   @media screen and (max-width:996px){
+      white-space: wrap;
+      line-height: 1;
+   }
+}
+
+.allTrailersBtn {
+   @include adaptiv-font(22,18,1);
+   font-weight: 700;
+   line-height: 27px;
+   letter-spacing: 0;
+   white-space: nowrap;
+
+   & svg {
+      @media screen and (max-width:996px){
+         width: 15px;
+      }
+   }
+}
+
+.videoContainer {
+   // height: 765px;
+   margin-bottom: 20px;
+
+   @media screen and (max-width:1430px) {
+      // height: 455px;
+   }
+
+   @media screen and (max-width:767px) {
+      // height: 352px;
+      margin-bottom: 30px;
+   }
+
+   @media screen and (max-width:575px) {
+      // height: 197px;
+   }
+
+   & video {
+      width: 100%;
+      // height: 100%;
+      object-fit: contain;
+
+      &::-webkit-media-controls {
+            /* Стилизация контейнера элементов управления */
+            background-color:transparent;
+            // padding: 10px;
+         }
+
+      //    &::-webkit-media-controls-play-button {
+      //       /* Стилизация кнопки воспроизведения */
+      //       background-color: #ff0000;
+      //       color: #fff;
+      //       border: none;
+      //       padding: 4px;
+      //       border-radius: 50%;
+      //    }
+
+      //    &::-webkit-media-controls-time-remaining-display {
+      //       /* Стилизация отображения оставшегося времени */
+      //       font-size: 14px;
+      //       color: #333;
+      //    }
+   }
+}
+
+.videoPreview {
+   display: flex;
+   gap: 20px;
+   height: 246px;
+
+   @media screen and (max-width:1430px) {
+      height: 146px;
+      gap: 9px;
+   }
+
+        @media screen and (max-width:996px) {
+           height: 117px;
+        }
+}
+
+.videoPreviewElement {
+   position: relative;
+   width: 343px;
+   border-radius: 10px;
+   overflow: hidden;
+   cursor: pointer;
+
+   @media screen and (max-width:1430px) {
+      width: 203.5px;
+   }
+   @media screen and (max-width:996px) {
+      width: 158px;
+   }
+   @media screen and (max-width:767px){
+      width: 184px;
+   }
+
+   & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+
+
+   &.active {
+      background: rgba(54, 87, 203, 0.65);
+
+      & img {
+         opacity: 0.5;
+      }
+   }
+}
+
+.play {
+   position: absolute;
+   width: 35px;
+   height: 35px;
+   top: calc(50% - 17px);
+   left: calc(50% - 17px);
+}
+
+.trailerInfo {}
+
+.trailerVideotitle {}
+
+.feedbackButtons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.trailerTitle {
+   @include adaptiv-font(45,25,1);
+   font-weight: 900;
+   line-height: 1;
+   letter-spacing: 0;
+}
+
+.likesContainer {
+   display: flex;
+   gap: 20px;
+}

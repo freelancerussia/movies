@@ -1,0 +1,61 @@
+@import '../../app/styles/mixins.module.scss';
+.header {
+   display: grid;
+   grid-template-columns: 152px auto 55px 138px;
+   align-items: center;
+   gap: 12px;
+   padding: 24px 0;
+
+   @media screen and (max-width:1430px){
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto 20px;
+   }
+
+   @media screen and (max-width:768px){
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-rows: auto;
+      gap: 4px;
+   }
+}
+
+.logoContainer {
+   @media screen and (max-width:1430px){
+      grid-column: 2 / span 1;
+   }
+   @media screen and (max-width:768px){
+      grid-column: 3 / span 1;
+   }
+}
+
+
+
+.searchContainer {
+   @media screen and (max-width:1430px) {
+         grid-column: 1 / span 1;
+         grid-row: 1 / span 1;
+      }
+
+      @media screen and (max-width:768px){
+         grid-column: 2 / span 1;
+      }
+}
+
+.loginBtnContainer {
+   @media screen and (max-width:1430px) {
+         grid-column: 3 / span 1;
+         grid-row: 1 / span 1;
+      }
+
+      @media screen and (max-width:768px){
+         grid-column: 4 / span 1;
+      }
+}
+
+.loginBtn {
+   width: 138px;
+   height: 53px;
+
+   @include adaptiv-value(width,138,66,1);
+   @include adaptiv-value(height,53,27,1);
+
+}

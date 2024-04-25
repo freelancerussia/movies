@@ -1,0 +1,25 @@
+@import '../styles/styles.module.scss';
+
+.filters {
+   display: flex;
+   gap: 15px;
+
+}
+
+.filterElement {
+
+   &.active {
+
+      & .filterBtn {
+         color: #fff;
+      }
+   }
+}
+
+.filterBtn {
+   @include adaptiv-font(18, 15, 1);
+   font-weight: 700;
+   line-height: 22px;
+   letter-spacing: 0;
+   color: rgba(255, 255, 255, 0.364);
+}

@@ -1,0 +1,24 @@
+
+@import '../../../common/styles/styles.module.scss';
+
+.ratingsCard {
+   border-radius: 10px;
+      background: rgb(27, 33, 51);
+      overflow: hidden;
+
+      width: 496px;
+      height: 444px;
+      padding: 14px 29px 16px 33.6px;
+
+      @media screen and (max-width:1430px){
+         width: 295px;
+         height: 264px;
+         padding: 10px 17px ;
+      }
+
+      @media screen and (max-width:991px){
+         width: 100%;
+         height: auto;
+         grid-column: 1 / span 2;
+      }
+}
