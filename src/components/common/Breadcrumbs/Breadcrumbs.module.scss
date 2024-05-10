@@ -1,6 +1,7 @@
 .breadCrumbsContainer {
    display: flex;
    gap: 32px;
+   align-items: center;
 
    & .link:last-child::after,
    & .link:last-child::before {
@@ -12,11 +13,11 @@
 .link {
    color: rgb(79, 91, 124);
    font-weight: 500;
-   line-height: 168.7%;
+   line-height: 1;
    letter-spacing: 0%;
    font-size: 16px;
    position: relative;
-   white-space: nowrap;
+   // white-space: nowrap;
 
    & a {
       color: rgb(79, 91, 124);

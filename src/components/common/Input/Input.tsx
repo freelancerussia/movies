@@ -4,15 +4,19 @@ import s from './Input.module.scss'
 export default function Input({
     placeholder,
     type = 'text',
+    value,
+    setValue,
 }: {
     placeholder: string
     type?: string
+    value: string
+    setValue: (value: string) => void
 }) {
-    const [inputValue, setValue] = useState('')
+    // const [inputValue, setValue] = useState('')
     return (
         <label className={s.label}>
             <input
-                value={inputValue}
+                value={value}
                 type={type}
                 placeholder={placeholder}
                 className={s.input}

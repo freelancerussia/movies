@@ -1,0 +1,48 @@
+
+
+.container {
+   // height: 100%;
+}
+
+.tabBtn {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0;
+      margin-right: 15px;
+opacity: 0.5;
+      &:last-child{margin:0px 0px 0px 0px;}
+
+      &.active {
+         opacity: 1;
+      }
+}
+
+.btnsContainer {
+margin-bottom: 20px;
+}
+
+.infoContent {
+display: flex;
+flex-direction: column;
+}
+
+.biography {
+
+}
+
+.infoContentElement {
+   display: grid;
+   grid-template-columns: 30% auto;
+   gap:15px;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      &:last-child{margin:0px 0px 0px 0px;}
+}
+
+.characteristicTitle {}
+
+.characteristicValue {
+   color:rgb(242, 246, 15);
+}

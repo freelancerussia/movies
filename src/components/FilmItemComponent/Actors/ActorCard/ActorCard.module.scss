@@ -1,0 +1,62 @@
+@import '../../../common/styles/styles.module.scss';
+
+.container{
+   width: 248.29px;
+   position: relative;
+
+   @media screen and (max-width:996px){
+      width: 200px;
+   }
+
+   @media screen and (max-width:768px){
+      width: 100%;
+   }
+}
+
+.link {
+   position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+}
+
+.imageContainer {
+   width: 100%;
+   height: 250px;
+         border-radius: 5px;
+         margin-bottom: 15px;
+         overflow: hidden;
+
+         @media screen and (max-width:768px){
+            margin-bottom: 5px;
+            height: 300px;
+         }
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.name {
+   @include adaptiv-font(18,14,1);
+      font-weight: 700;
+      letter-spacing: 0;
+}
+
+.engName {
+   color: rgba(255, 255, 255, 0.7);
+      @include adaptiv-font(15, 12, 1);
+   font-weight: 400;
+   letter-spacing: 0;
+   margin: 10px 0;
+
+   @media screen and (max-width:768px){
+      margin: 3px 0;
+   }
+}
+
+.role {
+   color: rgb(242, 246, 15);
+         @include adaptiv-font(16, 12, 1);
+      font-weight: 400;
+      letter-spacing: 0;
+}

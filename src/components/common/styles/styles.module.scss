@@ -34,3 +34,19 @@
          background: rgb(242, 246, 15);
 
 }
+
+%filmsContainer {
+   display: flex;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 22px;
+   
+      @media screen and (max-width:1430px) {
+         gap: 13px;
+      }
+   
+      @media screen and (max-width:768px) {
+         gap: 12px;
+      }
+}
+   

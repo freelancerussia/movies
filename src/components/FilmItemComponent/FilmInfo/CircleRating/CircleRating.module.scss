@@ -1,0 +1,74 @@
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:3px;
+   width: 71px;
+}
+
+.ratingGraph {
+   background: rgba(137, 203, 54, 0.3);
+   width: 52px;
+   height: 52px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+
+}
+
+.ratingCount {
+   // background: rgba(137, 203, 54, 0.3);
+   font-size: 13px;
+   font-weight: 700;
+   letter-spacing: 0;
+   width: 42px;
+   height: 42px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: calc(50%  - 21px);
+   left: calc(50% - 21px);
+}
+
+._10 {
+   background: rgba(75, 203, 54, 0.3);
+}
+
+._9 {
+   background: rgba(52, 234, 22, 0.3);
+}
+
+._8 {
+   background: rgba(75, 203, 54, 0.3);
+}
+
+._7 {
+background: rgba(120, 203, 54, 0.3);}
+
+._6 {
+background: rgba(137, 203, 54, 0.3);}
+
+._5 {
+background: rgba(203, 108, 54, 0.3);}
+
+._4 {
+background: rgba(203, 63, 54, 0.3);}
+
+._3 {
+background: rgba(218, 52, 52, 0.3);}
+
+._2 {
+background: rgba(241, 48, 48, 0.3);}
+
+._1 {
+background: rgba(255, 0, 0, 0.3);}
+
+._0 {
+   background: rgba(25, 30, 46, 0.3);
+}

@@ -6,6 +6,7 @@
    position: relative;
    border-radius: 10px;
    overflow: hidden;
+   position: relative;
 
    @media screen and (max-width:1430px) {
       width: 264px;
@@ -30,6 +31,9 @@
       object-fit: cover;
    }
 }
+
+.link {
+position: absolute;width: 100%;height: 100%;top: 0;left: 0; z-index: 2;}
 
 .personInfo {
    position: absolute;

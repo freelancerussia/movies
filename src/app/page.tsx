@@ -1,5 +1,5 @@
 import ExpectedReleases from '@/components/Homepage/ExpectedReleases/ExpectedReleases'
-import NewTrailers from '@/components/Homepage/NewTrailers/NewTrailers'
+// import NewTrailers from '@/components/Homepage/NewTrailers/NewTrailers'
 import NowAtTheCinema from '@/components/Homepage/NowAtTheCinema/NowAtTheCinema'
 import PopularFilms from '@/components/Homepage/PopularFilms/PopularFilms'
 import PopularPersons from '@/components/Homepage/PopularPersons/PopularPersons'
@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <main>
             <NowAtTheCinema />
-            <NewTrailers />
+            {/* <NewTrailers /> */}
             <PopularFilms />
             <PopularPersons />
             <ExpectedReleases />

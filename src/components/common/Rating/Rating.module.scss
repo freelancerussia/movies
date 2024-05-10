@@ -8,7 +8,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   position: absolute;
    top: 12.5px;
 
    border-radius: 5px;
@@ -18,8 +17,20 @@
    line-height: 22px;
    letter-spacing: 0;
 
+&._10 {
+      background: rgb(40, 255, 4);
+   }
+
+   &._9 {
+      background: rgb(52, 234, 22);
+   }
+
    &._8 {
       background: rgb(75, 203, 54);
+   }
+
+   &._7 {
+      background: rgb(120, 203, 54);
    }
 
    &._6 {
@@ -32,5 +43,21 @@
 
    &._4 {
       background: rgb(203, 63, 54);
+   }
+
+   &._3 {
+      background: rgb(218, 52, 52);
+   }
+
+   &._2 {
+      background: rgb(241, 48, 48);
+   }
+
+   &._1 {
+      background:rgb(255, 0, 0);
+   }
+
+   &._0 {
+      background: rgba(25, 30, 46, 0.3);
    }
 }

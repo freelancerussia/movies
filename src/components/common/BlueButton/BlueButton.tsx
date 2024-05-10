@@ -5,7 +5,7 @@ export default function BlueButton({
     children,
     handleClick,
 }: {
-    className: string
+    className?: string
     children: string
     handleClick: () => void
 }) {

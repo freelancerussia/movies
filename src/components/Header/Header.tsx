@@ -7,7 +7,7 @@ import Logo from './Logo/Logo'
 import BlueButton from '../common/BlueButton/BlueButton'
 import Menu from './Menu/Menu'
 import Burger from './Burger/Burger'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Modal from '../Modal/Modal'
 import SignIn from '../components-for-modal/SignIn/SignIn'
 import SignUp from '../components-for-modal/SignUp/SignUp'
@@ -42,15 +42,17 @@ export default function Header() {
                     <SearchButton />
                 </div>
                 <div className={s.loginBtnContainer}>
-                    <BlueButton
-                        handleClick={() => {
-                            setSign('in')
-                            setActiveModal(true)
-                        }}
-                        className={s.loginBtn}
-                    >
-                        Войти
-                    </BlueButton>
+                    {
+                        <BlueButton
+                            handleClick={() => {
+                                setSign('in')
+                                setActiveModal(true)
+                            }}
+                            className={s.loginBtn}
+                        >
+                            Войти
+                        </BlueButton>
+                    }
                 </div>
             </div>
             <Modal active={activeModal} setActive={setActiveModal}>

@@ -1,5 +1,9 @@
 @import '../../../app/styles/mixins.module.scss';
 
+
+.searchContainer {
+}
+
 .btn {
    width: 55px;
    height: 55px;
@@ -10,6 +14,6 @@
    align-items: center;
    justify-content: center;
 
-   @include adaptiv-value(width,55,28,1);
-   @include adaptiv-value(height,55,28,1);
+   @include adaptiv-value(width, 55, 28, 1);
+   @include adaptiv-value(height, 55, 28, 1);
 }

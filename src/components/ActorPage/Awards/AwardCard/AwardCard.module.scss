@@ -1,0 +1,27 @@
+.card {
+   border-radius: 10px;
+   background: rgba(54, 87, 203, 0.3);
+   width: 346px;
+   // height: 153px;
+   display: flex;
+   // align-items: center;
+   justify-content: center;
+   gap: 10px;
+   padding: 10px 15px ;
+   flex-direction: column;
+}
+
+.title {
+   font-size: 18px;
+   font-weight: 600;
+   letter-spacing: 0;
+}
+
+.description {
+   color: rgb(242, 246, 15);
+      flex: 1 1 100%;
+
+   font-size: 16px;
+   font-weight: 400;
+   letter-spacing: 0;
+}

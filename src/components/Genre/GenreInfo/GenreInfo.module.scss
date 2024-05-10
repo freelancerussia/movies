@@ -1,22 +1,42 @@
-@import  '../../common/styles/styles.module.scss';
+@import '../../common/styles/styles.module.scss';
 
 .container {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-   gap: 15px
+   gap: 15px;
+
+   @media screen and (max-width:768px) {
+      flex-direction: column;
+
+   }
 }
 
 .title {
    @extend %title;
 }
 
+.description {
+   margin: 17px 0 0 0;
+}
+
+.sortedContainer {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.sortType {
+   
+}
+
 .sortedSelect {
    border-radius: 10px;
-      background: rgb(27, 33, 51);
-         font-size: 14px;
-         font-weight: 600;
-         letter-spacing: 0;
-         padding: 17px 19px;
-         color: #fff;
+   background: rgb(27, 33, 51);
+   font-size: 14px;
+   font-weight: 600;
+   letter-spacing: 0;
+   padding: 17px 19px;
+   color: #fff;
+
 }

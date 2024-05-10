@@ -1,0 +1,18 @@
+@import '../../common/styles/styles.module.scss';
+
+.title {
+   @extend %title;
+}
+
+.showMore {
+   display: inline-block;
+   padding: 15px;
+   width: 158px;
+   height: 53px;
+   display: block;
+   margin: 0 auto;
+}
+
+.hidden {
+   display: none;
+}

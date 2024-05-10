@@ -7,11 +7,11 @@ export default function Button({
     style,
 }: {
     children: string
-    onClick: () => void
+    onClick: (e?: Event) => void
     style?: CSSProperties
 }) {
     return (
-        <button style={style} onClick={onClick} className={s.btn}>
+        <button style={style} onClick={e => onClick()} className={s.btn}>
             {children}
         </button>
     )

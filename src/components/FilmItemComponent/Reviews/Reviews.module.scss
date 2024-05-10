@@ -1,0 +1,21 @@
+@import '../../common/styles/styles.module.scss';
+
+
+.section {
+   padding: 60px 0
+}
+
+.title {
+@extend %title;
+}
+
+.showMore {
+   display: block;
+   margin: 0 auto;
+   width: 153px;
+   height: 51px;
+}
+
+.hidden {
+   display: none;
+}

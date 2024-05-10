@@ -8,16 +8,37 @@ import Link from 'next/link'
 import Api from '@/api'
 import { FilmCardType, FilmsFilterType } from '@/api/films'
 
+export const genresFilter = [
+    { id: 'all', filter: 'Все', value: 'любой' },
+    {
+        id: 'boevik',
+        filter: 'Боевики',
+        value: 'боевик',
+    },
+    {
+        id: 'prikluchenia',
+        filter: 'Приключения',
+        value: 'приключения',
+    },
+    {
+        id: 'komedia',
+        filter: 'Комедии',
+        value: 'комедия',
+    },
+    {
+        id: 'fantastica',
+        filter: 'Фантастика',
+        value: 'фантастика',
+    },
+    {
+        id: 'triller',
+        filter: 'Триллеры',
+        value: 'триллер',
+    },
+    { id: 'drama', filter: 'Драма', value: 'драма' },
+]
+
 export default function NowAtTheCinema() {
-    const genresFilter = [
-        { id: 1, filter: 'Все', value: 'любой' },
-        { id: 2, filter: 'Боевики', value: 'боевик' },
-        { id: 3, filter: 'Приключения', value: 'приключения' },
-        { id: 4, filter: 'Комедии', value: 'комедия' },
-        { id: 5, filter: 'Фантастика', value: 'фантастика' },
-        { id: 6, filter: 'Триллеры', value: 'триллер' },
-        { id: 7, filter: 'Драма', value: 'драма' },
-    ]
     const [isActiveFilter, setIsActiveFilter] = useState(genresFilter[0])
 
     const [films, setFilms] = useState<null | FilmCardType[]>(null)
@@ -27,15 +48,15 @@ export default function NowAtTheCinema() {
             const filters: FilmsFilterType = {
                 page: 1,
                 limit: 8,
-                status: 'completed',
+                ticketsOnSale: true,
                 notNullFields: 'name',
             }
-            if (isActiveFilter.id !== 1) {
+            if (isActiveFilter.id !== 'all') {
                 filters['genres.name'] = isActiveFilter.value
             } else delete filters['genres.name']
 
             try {
-                const data = await Api().films.getNowAtCinemaFilms(filters)
+                const data = await Api().films.getFilms(filters)
                 if (data.docs.length) {
                     setFilms(data.docs)
                 }
@@ -74,11 +95,15 @@ export default function NowAtTheCinema() {
                                   name={f.name}
                                   rating={f.rating}
                                   poster={f.poster?.url}
+                                  slug={f.id}
                               />
                           ))
-                        : 'Фильов не найдено'}
+                        : 'Фильмов не найдено'}
                 </div>
-                <Link className={s.allNewFilmsBtn} href={'/'}>
+                <Link
+                    className={s.allNewFilmsBtn}
+                    href={`/films/${isActiveFilter.id}`}
+                >
                     Все новинки
                 </Link>
             </Container>

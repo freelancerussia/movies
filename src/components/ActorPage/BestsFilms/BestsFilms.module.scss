@@ -1,0 +1,20 @@
+@import '../../common/styles/styles.module.scss';
+
+
+.titleContainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title {
+@extend %title;
+}
+
+.filmsContainer {
+   @extend %filmsContainer;
+   &.fetching{
+      opacity: 0.5;
+   }
+}
+

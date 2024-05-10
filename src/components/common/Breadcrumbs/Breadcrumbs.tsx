@@ -7,9 +7,15 @@ type CrumbType = {
     path?: string
 }
 
-export default function Breadcrumbs({ crumbs }: { crumbs: CrumbType[] }) {
+export default function Breadcrumbs({
+    crumbs,
+    classname,
+}: {
+    crumbs: CrumbType[]
+    classname?: string
+}) {
     return (
-        <nav>
+        <nav className={classname}>
             <ul className={s.breadCrumbsContainer}>
                 {crumbs.map((crumb, index) => (
                     <li key={index} className={s.link}>

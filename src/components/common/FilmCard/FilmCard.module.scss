@@ -2,6 +2,7 @@
 
 .filmCard {
    width: 339px;
+   position: relative;
    @media screen and (max-width:1430px){
       width: 202px;
    }
@@ -13,6 +14,10 @@
    @media screen and (max-width:660px){
       width: 48%;
    }
+}
+
+.link {
+   position: absolute;width: 100%;height: 100%;top: 0;left: 0; z-index: 2;
 }
 
 .imgContainer {

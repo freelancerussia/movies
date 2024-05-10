@@ -1,0 +1,15 @@
+.element {
+   background: rgb(27, 33, 51);
+   border-radius: 10px;
+   width: 73px;
+   height: 73px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: inline-block;
+
+   &:disabled {
+      opacity: 0.5;
+      cursor: auto;
+   }
+}

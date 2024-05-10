@@ -1,7 +1,11 @@
 @import '../../common/styles/styles.module.scss';
 
-.filmContainer {
 
+.section{
+   padding-top: 17px;
+}
+.filmsContainer {
+   margin-bottom: 70px;
 }
 
 .imgContainer {}
@@ -13,4 +17,3 @@
 .engTitle {}
 
 .ratingsContainer {}
-

@@ -1,0 +1,120 @@
+@import '../../../common/styles/styles.module.scss';
+
+
+
+.horizontalFilmCard{
+   display: grid;
+   grid-template-columns: auto 1fr auto auto;
+   justify-content: space-between;
+   align-items: center;
+
+   padding-bottom: 25px;
+   margin-bottom: 25px;
+   border-bottom: 1px solid rgb(59, 72, 107);
+   
+
+   @media screen and (max-width:996px){
+      gap: 10px;
+   }
+
+   @media screen and (max-width:768px){
+         grid-template-columns: auto 1fr auto ;
+grid-template-rows: auto 50px;
+   }
+
+   &:last-child{margin:0px 0px 0px 0px;}
+}
+
+.imgContainer{
+   width: 146px;
+   @include adaptiv-value(width,146,100,1);
+   flex-shrink: 0;
+
+   img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+   }
+}
+
+.filmInfo{
+   flex:1 1 auto;
+   margin-left: 39px;
+
+   @media screen and (max-width:996px){
+      margin-left: 0;
+   }
+}
+
+.title{
+   @include adaptiv-font(25,18,1);
+      font-weight: 700;
+      letter-spacing: 0;
+      margin-bottom: 9px;
+}
+
+.engTitle{
+   color: rgb(84, 104, 158);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-bottom: 9px;
+      display: inline-block;
+}
+
+.genres{
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: rgb(242, 246, 15);
+
+}
+
+.ratingsContainer{
+      display: flex;
+   margin: 0 29px 0 15px;
+   
+   @media screen and (max-width:996px){
+      flex-direction: column;
+   }
+
+   @media screen and (max-width:768px){
+      margin-right: 0;
+   }
+   
+
+}
+
+.ratingElement {
+   text-align: center;
+   position: relative;
+   margin-right: 39px;
+
+   @media screen and (max-width:996px){
+      margin: 0 0 5px 0;
+   }
+
+   &:last-child{
+      margin-right: 0;
+   }
+}
+
+.ratingElementTitle {
+   @include adaptiv-font(18,15,1);
+   font-weight: 500;
+   letter-spacing: 0;
+   margin-top: 6px;
+   display: inline-block;
+}
+
+.filmCardBtn {
+   height: 71px;
+   font-size: 18px;
+
+   @media screen and (max-width:768px){
+      height: 50px;
+      grid-row:  2;
+      grid-column: span 3;
+      width: 100%;
+   }
+}
