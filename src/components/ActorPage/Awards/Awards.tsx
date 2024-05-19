@@ -40,6 +40,7 @@ export default function Awards({ personId }: { personId: number | null }) {
         }
         getAwards()
     }, [page])
+    if (!awards?.length) return ''
     return (
         <section>
             <Container>

@@ -27,12 +27,18 @@ export default function Facts({
                               <Fact key={index} fact={f.value} />
                           ))
                     : 'Фактов не найдено :('}
-                <BlueButton
-                    className={`${s.showMore} ${totalFactsCount >= length ? s.hidden : ''}`}
-                    handleClick={() => setTotalFactsCount(prev => prev + limit)}
-                >
-                    Показать еще
-                </BlueButton>
+                {facts?.length ? (
+                    <BlueButton
+                        className={`${s.showMore} ${totalFactsCount >= length ? s.hidden : ''}`}
+                        handleClick={() =>
+                            setTotalFactsCount(prev => prev + limit)
+                        }
+                    >
+                        Показать еще
+                    </BlueButton>
+                ) : (
+                    ''
+                )}
             </Container>
         </section>
     )
