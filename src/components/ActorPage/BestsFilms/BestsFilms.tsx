@@ -49,6 +49,7 @@ export default function BestsFilms({ personId }: { personId: number | null }) {
                         page={page}
                         setPage={setPage}
                         totalPages={totalPages}
+                        classname={s.pagination}
                     />
                 </div>
                 <div

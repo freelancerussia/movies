@@ -42,7 +42,7 @@ export default function Awards({ personId }: { personId: number | null }) {
     }, [page])
     if (!awards?.length) return ''
     return (
-        <section>
+        <section className={s.section}>
             <Container>
                 <Pagination
                     limit={limit}
