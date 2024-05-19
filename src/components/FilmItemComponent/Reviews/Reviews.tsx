@@ -43,11 +43,14 @@ export default function Reviews({ filmId }: { filmId: string }) {
         <section className={s.section}>
             <Container>
                 <h2 className={s.title}>Отзывы</h2>
-
-                {reviews?.map((r, index) => (
-                    <ReviewComponent key={r.id + index} review={r} />
-                ))}
-                {reviews.length ? (
+                <div className={isLoading ? s.loading : ''}>
+                    {reviews.length
+                        ? reviews?.map((r, index) => (
+                              <ReviewComponent key={r.id + index} review={r} />
+                          ))
+                        : 'Отзывов не найдено :('}
+                </div>
+                {reviews.length && reviews.length > limit ? (
                     <BlueButton
                         className={`${s.showMore} ${page === totalPagesCount ? s.hidden : ''}`}
                         handleClick={() => setPage(prev => ++prev)}
@@ -55,7 +58,7 @@ export default function Reviews({ filmId }: { filmId: string }) {
                         Показать еще
                     </BlueButton>
                 ) : (
-                    'Отзывов не найдено :('
+                    ''
                 )}
             </Container>
         </section>

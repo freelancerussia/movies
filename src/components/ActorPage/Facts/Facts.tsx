@@ -16,6 +16,8 @@ export default function Facts({
     if (facts) {
         length = facts.length
     }
+    console.log(facts)
+
     return (
         <section>
             <Container>
@@ -27,7 +29,7 @@ export default function Facts({
                               <Fact key={index} fact={f.value} />
                           ))
                     : 'Фактов не найдено :('}
-                {facts?.length ? (
+                {length && length > 4 ? (
                     <BlueButton
                         className={`${s.showMore} ${totalFactsCount >= length ? s.hidden : ''}`}
                         handleClick={() =>

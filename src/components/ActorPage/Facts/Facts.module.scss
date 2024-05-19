@@ -2,14 +2,14 @@
 
 .title {
    @extend %title;
+   margin-bottom: 15px;
 }
 
 .showMore {
-   display: inline-block;
    padding: 15px;
    width: 158px;
    height: 53px;
-   display: block;
+   display: block !important;
    margin: 0 auto;
 }
 

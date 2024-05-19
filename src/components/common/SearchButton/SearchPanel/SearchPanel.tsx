@@ -55,7 +55,24 @@ export default function SearchPanel({
                 //
             })
     }
+    useEffect(() => {
+        const onEnterClick = async (event: KeyboardEvent) => {
+            if (event.key === 'Enter') {
+                event.preventDefault()
 
+                try {
+                    await getFilms()
+                } catch (e) {
+                    //
+                }
+            }
+        }
+        document.body.addEventListener('keydown', onEnterClick)
+
+        return () => {
+            document.body.removeEventListener('keydown', onEnterClick)
+        }
+    }, [searchText])
     return (
         <div className={s.searchPanelContainer}>
             <div className={s.searchPanel}>
