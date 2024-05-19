@@ -65,10 +65,10 @@ export default function NewTrailers() {
                             {activeTrailerPreview.title}
                         </h3>
                         <div className={s.likesContainer}>
-                            <Like handleClick={() => console.log('like')} />
+                            <Like handleClick={() => {}} />
                             <Like
                                 style={{ transform: 'rotate(180deg)' }}
-                                handleClick={() => console.log('dislike')}
+                                handleClick={() => {}}
                             />
                         </div>
                     </div>

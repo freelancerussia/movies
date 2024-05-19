@@ -3,8 +3,6 @@ import Container from '@/components/Container/Container'
 import s from './FilmInfo.module.scss'
 import Breadcrumbs from '@/components/common/Breadcrumbs/Breadcrumbs'
 import CircleRating from './CircleRating/CircleRating'
-import Link from 'next/link'
-import { Icons } from '@/components/Icons'
 import { FilmCardType } from '@/api/films'
 
 export default function FilmInfo({
@@ -17,7 +15,7 @@ export default function FilmInfo({
             <div className={s.background}>
                 <img
                     // className={s.background}
-                    src={filmItem?.backdrop.url}
+                    src={filmItem?.backdrop?.url}
                     alt=""
                 />
             </div>
@@ -26,7 +24,7 @@ export default function FilmInfo({
                 {' '}
                 <div className={s.topContainer}>
                     <div className={s.imgContainer}>
-                        <img src={filmItem?.poster.url} alt="" />
+                        <img src={filmItem?.poster?.url} alt="" />
                     </div>
                     <div className={s.infoContainer}>
                         <Breadcrumbs
@@ -45,11 +43,11 @@ export default function FilmInfo({
                         <h4 className={s.enTitle}>{filmItem?.enName || ''}</h4>
                         <div className={s.ratingsContainer}>
                             <CircleRating
-                                rating={filmItem?.rating.kp || 0}
+                                rating={filmItem?.rating?.kp || 0}
                                 title="Kinopoisk"
                             />
                             <CircleRating
-                                rating={filmItem?.rating.imdb || 0}
+                                rating={filmItem?.rating?.imdb || 0}
                                 title="IMDb"
                             />
                         </div>

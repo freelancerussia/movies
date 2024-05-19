@@ -35,7 +35,7 @@ export default function ExpectedReleases() {
                 setFilms(res.docs)
                 setTotalPages(res.pages)
             } catch (error) {
-                console.log(error)
+                // console.log(error)
             } finally {
                 setIsLoading(false)
             }

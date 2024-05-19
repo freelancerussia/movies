@@ -8,7 +8,7 @@ export default function Fact({ fact }: { fact: string }) {
                 <p
                     dangerouslySetInnerHTML={{ __html: fact || '' }}
                     className={s.fact}
-                ></p>
+                />
             ) : (
                 <p className={s.fact}>{fact}</p>
             )}

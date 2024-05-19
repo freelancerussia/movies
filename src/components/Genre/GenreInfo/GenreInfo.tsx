@@ -22,7 +22,6 @@ export default function GenreInfo({ genre }: { genre: string }) {
     const [sortType, setSortType] = useState<string>(
         searchParams.get('sortType') || '-1',
     )
-    console.log(sortField)
 
     useEffect(() => {
         const params = new URLSearchParams(searchParams)
@@ -40,8 +39,6 @@ export default function GenreInfo({ genre }: { genre: string }) {
     }, [sortField, sortType])
 
     const onSetSortType = (str: string) => {
-        console.log(str)
-
         if (str === '-1' || str === '1') {
             setSortType(str)
         } else {

@@ -2,7 +2,6 @@
 
 import Container from '@/components/Container/Container'
 import s from './PopularPersons.module.scss'
-import Filters from '@/components/common/Filters/Filters'
 import PersonCard from './PersonCard/PersonCard'
 import RatingsCard from './RatingsCard/RatingsCard'
 import { useEffect, useState } from 'react'
@@ -10,15 +9,18 @@ import { GetPersonsFilter, Person } from '@/api/persons'
 import Api from '@/api'
 
 export default function PopularPersons() {
-    const filters = [
-        { id: '1', title: 'За год', value: 'year' },
-        { id: '2', title: 'За месяц', value: 'month' },
-        { id: '3', title: 'За неделю', value: 'week' },
-    ]
+    // const filters = [
+    //     { id: '1', title: 'За год', value: 'year' },
+    //     { id: '2', title: 'За месяц', value: 'month' },
+    //     { id: '3', title: 'За неделю', value: 'week' },
+    // ]
 
+    // eslint-disable-next-line no-unused-vars
     const [page, setPage] = useState(1)
     const [persons, setPersons] = useState<Person[] | null>(null)
+    // eslint-disable-next-line no-unused-vars
     const [isLoading, setIsLoading] = useState(false)
+    // eslint-disable-next-line no-unused-vars
     const [totalPages, setTotalPages] = useState(0)
 
     const limit = 6
@@ -39,7 +41,7 @@ export default function PopularPersons() {
                 setPersons(res.docs)
                 setTotalPages(res.pages)
             } catch (error) {
-                console.log(error)
+                // console.log(error)
             } finally {
                 setIsLoading(false)
             }

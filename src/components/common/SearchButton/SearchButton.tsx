@@ -1,6 +1,6 @@
 import { Icons } from '@/components/Icons'
 import s from './SearchButton.module.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import SearchPanel from './SearchPanel/SearchPanel'
 
 export default function SearchButton() {

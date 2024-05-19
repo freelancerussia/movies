@@ -2,23 +2,23 @@
 
 import { Icons } from '@/components/Icons'
 import s from './Pagination.module.scss'
-import { useState } from 'react'
 
 export default function Pagination({
     classname,
     page,
     setPage,
     totalPages,
+    // eslint-disable-next-line no-unused-vars
     limit,
 }: {
     classname?: string
     page: number
+    // eslint-disable-next-line no-unused-vars
     setPage: (value: number) => void
     totalPages: number
     limit: number
 }) {
     // const [currentPage, setCurrentPage] = useState(1)
-    const portion = limit
     // const totalCount = 20
     // const totalPagesCount = Math.ceil(totalCount / portion)
     const totalPagesCount = totalPages

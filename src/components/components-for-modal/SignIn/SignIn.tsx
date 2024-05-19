@@ -14,6 +14,7 @@ export default function SignIn({
     setCloseModal: () => void
     setSingUp: () => void
 }) {
+    // eslint-disable-next-line no-unused-vars
     const [fakeAuth, setFakeAuth] = useState<boolean>(false)
 
     const [email, setEmail] = useState('')

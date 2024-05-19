@@ -5,20 +5,20 @@ export const filmsApi = (instance: AxiosInstance) => ({
 
         return data
     },
-    async getFilmByTitle(filters:FilmsByTitle):Promise<GetFilmRes>{
+    async getFilmByTitle(filters: FilmsByTitle): Promise<GetFilmRes> {
         const { data } = await instance.get('movie/search', { params: filters })
         return data
     },
-    async getFilm(id:number):Promise<FilmCardType>{
-        const {data} = await instance.get(`movie/${id}`)
+    async getFilm(id: number): Promise<FilmCardType> {
+        const { data } = await instance.get(`movie/${id}`)
         return data
     },
-    async getReviews(filters:GetReviewsFilter):Promise<GetReviewsRes>{
-        const {data} = await instance.get(`review`,{ params: filters })
+    async getReviews(filters: GetReviewsFilter): Promise<GetReviewsRes> {
+        const { data } = await instance.get(`review`, { params: filters })
         return data
     },
-    async getImages(filters:GetReviewsFilter):Promise<GetImagesRes>{
-        const {data} = await instance.get(`image`,{ params: filters })
+    async getImages(filters: GetReviewsFilter): Promise<GetImagesRes> {
+        const { data } = await instance.get(`image`, { params: filters })
         return data
     },
 })
@@ -36,24 +36,22 @@ export type FilmsFilterType = {
     notNullFields?: string
     'genres.name'?: string
     'persons.id'?: string | null
-    ticketsOnSale?:boolean
-    'releaseYears.end'?:string | null
+    ticketsOnSale?: boolean
+    'releaseYears.end'?: string | null
 }
 
 export type GetReviewsFilter = {
-  page:number
-  limit:number
-  sortField?: string
-  movieId?:string | null
-
+    page: number
+    limit: number
+    sortField?: string
+    movieId?: string | null
 }
 
 export type FilmsByTitle = {
-    page:number
-    limit:number
+    page: number
+    limit: number
     query: string
 }
-
 
 type GetRes = {
     limit: number
@@ -67,29 +65,29 @@ type GetFilmRes = GetRes & {
 }
 
 type GetReviewsRes = GetRes & {
-  docs:ReviewType[]
+    docs: ReviewType[]
 }
 
 export type ImageType = {
-  movieId:number
-  type:string
-  language:string
-  url:string
-  previewUrl:string
+    movieId: number
+    type: string
+    language: string
+    url: string
+    previewUrl: string
 }
 
 export type GetImagesRes = GetRes & {
-  docs:ImageType[]
+    docs: ImageType[]
 }
 
 export type ReviewType = {
-id:number
-title:string
-type:string
-review:string
-date:string
-author:string
-createdAt:string
+    id: number
+    title: string
+    type: string
+    review: string
+    date: string
+    author: string
+    createdAt: string
 }
 export type FilmCardType = {
     ageRating: number
@@ -139,53 +137,52 @@ export type FilmCardType = {
         russianFilmCritics: number
     }
     year: number
-    slogan:string
-      videos: {
-    trailers: [
-      {
-        url: string,
-        name: string,
-        site: string,
-        type: string,
-        size: number
-      }
-    ],
-    teasers: [
-      {
-    url: string,
-        name: string,
-        site: string,
-        type: string,
-        size: number
-      }
-    ]
-  },
-   persons: [
-    {
-      id: number,
-      photo: string,
-      name: string,
-      enName: string,
-      description: string,
-      profession: string
-      enProfession:string
+    slogan: string
+    videos: {
+        trailers: [
+            {
+                url: string
+                name: string
+                site: string
+                type: string
+                size: number
+            },
+        ]
+        teasers: [
+            {
+                url: string
+                name: string
+                site: string
+                type: string
+                size: number
+            },
+        ]
     }
-  ],
-   budget: {
-    value: number,
-    currency: string
-  },
-   premiere: {
-    country: string,
-    world: string,
-    russia: string,
-    digital: string,
-    cinema: string,
-    bluray: string,
-    dvd: string
-  },
+    persons: [
+        {
+            id: number
+            photo: string
+            name: string
+            enName: string
+            description: string
+            profession: string
+            enProfession: string
+        },
+    ]
+    budget: {
+        value: number
+        currency: string
+    }
+    premiere: {
+        country: string
+        world: string
+        russia: string
+        digital: string
+        cinema: string
+        bluray: string
+        dvd: string
+    }
 }
-
 
 // type FilmType ={
 //   id: number,

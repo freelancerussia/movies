@@ -2,13 +2,12 @@
 import { Icons } from '@/components/Icons'
 import s from './NumbersPagination.module.scss'
 import PaginationElement from './PaginationElement/PaginationElement'
-import { transform } from 'next/dist/build/swc'
-import { useState } from 'react'
 
 export default function NumbersPagination({
     setPage,
     currentPage,
 }: {
+    // eslint-disable-next-line no-unused-vars
     setPage: (value: number) => void
     currentPage: number
 }) {
@@ -24,27 +23,6 @@ export default function NumbersPagination({
 
     for (let i = 1; i <= totalPageCount; i++) {
         pagesArray.push(i)
-    }
-
-    const firsElementRender = (page: number) => {
-        return [
-            <PaginationElement
-                style={
-                    page === currentPage
-                        ? {
-                              background: 'rgb(54, 87, 203)',
-                          }
-                        : {}
-                }
-                key={page}
-                onClick={() => setPage(page)}
-            >
-                {page}
-            </PaginationElement>,
-            <span className={s.points} key={page * Math.random()}>
-                ...
-            </span>,
-        ]
     }
 
     const renderPages = () => {

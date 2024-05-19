@@ -10,6 +10,7 @@ import PersonSearchCard from '../PersonSearchCard/PersonSearchCard'
 export default function SearchPanel({
     setIsSearchOpen,
 }: {
+    // eslint-disable-next-line no-unused-vars
     setIsSearchOpen: (isValue: boolean) => void
 }) {
     const [searchText, setSearchText] = useState('')
@@ -49,6 +50,7 @@ export default function SearchPanel({
                 setPersons(res[0].docs)
                 setFilms(res[1].docs)
             })
+            // eslint-disable-next-line no-unused-vars
             .catch(e => {
                 //
             })

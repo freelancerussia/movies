@@ -6,8 +6,10 @@ import Api from '@/api'
 import { GetReviewsFilter, ImageType } from '@/api/films'
 
 export default function Images({ filmId }: { filmId: string | null }) {
+    // eslint-disable-next-line no-unused-vars
     const [page, setPage] = useState(1)
     const limit = 10
+    // eslint-disable-next-line no-unused-vars
     const [isLoading, setIsLoading] = useState(false)
 
     const [images, setImages] = useState<ImageType[] | null>(null)

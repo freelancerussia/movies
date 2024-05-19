@@ -2,13 +2,6 @@ import Link from 'next/link'
 import Rating from '../Rating/Rating'
 import s from './FilmCard.module.scss'
 
-type FilmData = {
-    rating: number
-    percent?: number
-    title: string
-    genres: string[]
-}
-
 export default function FilmCard({
     name,
     genres,
@@ -25,17 +18,9 @@ export default function FilmCard({
     poster: string
     slug: number
 }) {
-    const setColorAddInfo = (value: number) => {
-        if (!value) return ''
-        if (value >= 8) return `${s._8}`
-        else if (value >= 6 && value < 8) return `${s._6}`
-        else if (value >= 5 && value < 6) return `${s._5}`
-        else if (value >= 4 && value < 5) return `${s._4}`
-    }
-
     return (
         <div className={s.filmCard}>
-            <Link className={s.link} href={`/films/film/${slug}`}></Link>
+            <Link className={s.link} href={`/films/film/${slug}`} />
             <div className={s.imgContainer}>
                 <img src={poster || '/images/default-poster.png'} alt="img" />
                 {/* {filmData.percent && (

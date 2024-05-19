@@ -11,6 +11,7 @@ export default function Reviews({ filmId }: { filmId: string }) {
     const [page, setPage] = useState(1)
     const limit = 5
     const [reviews, setReviews] = useState<ReviewType[]>([])
+    // eslint-disable-next-line no-unused-vars
     const [isLoading, setIsLoading] = useState(false)
     const [totalPagesCount, setTotalPagesCount] = useState(0)
     useEffect(() => {

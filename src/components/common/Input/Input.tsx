@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import s from './Input.module.scss'
 
 export default function Input({
@@ -10,9 +9,9 @@ export default function Input({
     placeholder: string
     type?: string
     value: string
+    // eslint-disable-next-line no-unused-vars
     setValue: (value: string) => void
 }) {
-    // const [inputValue, setValue] = useState('')
     return (
         <label className={s.label}>
             <input

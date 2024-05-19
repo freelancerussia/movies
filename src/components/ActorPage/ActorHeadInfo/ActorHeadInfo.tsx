@@ -7,7 +7,7 @@ import { Person } from '@/api/persons'
 export default function ActorHeadInfo({ person }: { person: Person | null }) {
     return (
         <section className={s.section}>
-            <div className={s.background}></div>
+            <div className={s.background} />
             <Container>
                 <div className={s.container}>
                     <div className={s.imageContainer}>

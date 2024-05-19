@@ -42,7 +42,7 @@ export default function Films({ genre }: { genre: string }) {
                     setFilms(res.docs)
                 }
             } catch (e: any) {
-                console.log(e.message)
+                // console.log(e.message)
             }
             setIsFetching(false)
         }

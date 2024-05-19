@@ -58,6 +58,10 @@
    }
 
    &._0 {
-      background: rgba(25, 30, 46, 0.3);
-   }
+background: rgb(255, 0, 0);   }
+
+&._null {
+   background: rgba(25, 30, 46, 0.3);
 }
+}
+

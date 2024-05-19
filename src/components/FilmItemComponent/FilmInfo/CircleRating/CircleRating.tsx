@@ -61,7 +61,7 @@ export default function CircleRating({
         <div className={s.container}>
             <div className={`${s.ratingGraph} ${setColorAddInfo(rating)}`}>
                 <Doughnut data={data} />
-                <div className={s.ratingCount}>{rating}</div>
+                <div className={s.ratingCount}>{rating ? rating : '-'}</div>
             </div>
             <span>{title}</span>
         </div>

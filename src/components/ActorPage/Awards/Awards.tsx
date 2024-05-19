@@ -9,6 +9,8 @@ import { AwardType } from '@/api/persons'
 
 export default function Awards({ personId }: { personId: number | null }) {
     const [page, setPage] = useState(1)
+
+    // eslint-disable-next-line no-unused-vars
     const [limit, setLimit] = useState(4)
     const [totalPages, setTotalPages] = useState(0)
     const [awards, setAwards] = useState<AwardType[] | null>(null)

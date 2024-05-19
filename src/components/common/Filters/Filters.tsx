@@ -13,6 +13,7 @@ export default function Filters({
     value,
 }: {
     filters: FilterElement[]
+    // eslint-disable-next-line no-unused-vars
     setValue: (value: string | null) => void
     value: string | null
 }) {

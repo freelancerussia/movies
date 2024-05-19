@@ -22,7 +22,8 @@ export default function Rating({
             else if (number >= 3 && number < 4) return `${s._4}`
             else if (number >= 2 && number < 3) return `${s._3}`
             else if (number >= 1 && number < 2) return `${s._2}`
-            else if (number >= 0 && number < 1) return `${s._1}`
+            else if (number > 0 && number < 1) return `${s._1}`
+            else if (number === 0) return `${s._null}`
         } else {
             return `${s._0}`
         }
@@ -32,7 +33,7 @@ export default function Rating({
             style={styles}
             className={` ${s.addInfo} ${setColorAddInfo(rating)}`}
         >
-            {rating}
+            {rating ? rating : '-'}
         </span>
     )
 }
