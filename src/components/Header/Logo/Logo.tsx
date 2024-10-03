@@ -7,7 +7,7 @@ export default function Logo({ style }: { style?: CSSProperties }) {
     return (
         <div className={s.logoContainer}>
             <div className={s.logo}>
-                 <Link href={'/'}>
+                <Link href={'/'}>
                     {Icons.logoIcon} <span> Kino</span>area
                 </Link>
             </div>

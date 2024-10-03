@@ -16,7 +16,6 @@ export default function Facts({
     if (facts) {
         length = facts.length
     }
-    console.log(facts)
 
     return (
         <section>
