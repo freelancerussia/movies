@@ -58,7 +58,7 @@ export default function PopularFilms() {
         getData()
     }, [page, year])
     return (
-        <section>
+        <section className={s.section}>
             <Container>
                 <div className={s.popularFilmsFilterContainer}>
                     <h2 className={`${s.title} ${s.line}`}>
