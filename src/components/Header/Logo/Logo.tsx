@@ -7,7 +7,9 @@ export default function Logo({ style }: { style?: CSSProperties }) {
     return (
         <div className={s.logoContainer}>
             <div className={s.logo}>
-                {Icons.logoIcon} <span> Kino</span>area
+                 <Link href={'/'}>
+                    {Icons.logoIcon} <span> Kino</span>area
+                </Link>
             </div>
             <div className={s.logoSocials} style={style}>
                 <ul className={s.socialsList}>
