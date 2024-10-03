@@ -23,8 +23,8 @@ export default function Facts({
                 <h2 className={s.title}>Интересные факты</h2>
                 {facts?.length
                     ? facts
-                          .filter((f, index) => index < totalFactsCount)
-                          .map((f, index) => (
+                          ?.filter((f, index) => index < totalFactsCount)
+                          ?.map((f, index) => (
                               <Fact key={index} fact={f.value} />
                           ))
                     : 'Фактов не найдено :('}
